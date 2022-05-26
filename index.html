@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Apple inspired Pride clock</title>
+  
+  
+  
+  
+<style>
+html {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.clock {
+  font-size: 45vmin;
+  line-height: 0.8;
+  position: static;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-style: italic;
+  font-weight: 1000;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+.clock-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  place-content: center;
+  background: repeating-radial-gradient(circle at -150% -25%, #fff, #777 0.025em, #fff 0.05em);
+  filter: contrast(2000%);
+}
+
+.numbers {
+  font-size: 1em;
+  filter: blur(0.0125em);
+  transform: rotate(6deg);
+  opacity: 0.46;
+}
+
+.hour {
+  transform: translatex(0.2em);
+}
+
+.min {
+  transform: translatex(-0.2em);
+}
+
+.clock-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+  background: repeating-radial-gradient(circle at -150% -25% , #f7b232 0em, #f7b232 0.05em, #e12626 0.05em, #e12626 0.1em, #733d2c 0.1em, #733d2c 0.15em, #2b1d1d 0.15em, #2b1d1d 0.2em, #511c69 0.2em, #511c69 0.25em, #1c73c4 0.25em, #1c73c4 0.3em, #a0cdfb 0.3em, #a0cdfb 0.35em, #69d6ad 0.35em, #69d6ad 0.4em, #ffcd04 0.4em, #ffcd04 0.45em, #fbaaaa 0.45em, #fbaaaa 0.5em);
+}
+
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="clock">
+	<div class="clock-inner">
+		<div class="numbers">
+			<div class="hour" id="hour">9</div>
+			<div class="min" id="min">41</div>
+		</div>
+	</div>
+	<div class="clock-overlay"></div>
+</div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  
+      <script id="rendered-js" >
+window.onload = function () {
+  var start = setInterval(timeNow, 1000);
+};
+
+function timeNow() {
+  var time = new Date();
+
+  h = time.getHours();
+  m = time.getMinutes();
+
+  document.getElementById("hour").innerHTML = h;
+  document.getElementById("min").innerHTML = m;
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+</body>
+
+</html>
+ 
